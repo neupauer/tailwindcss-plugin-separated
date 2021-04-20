@@ -10,7 +10,7 @@ const separatedPlugin = plugin(
             [`.separated-${e(key)}:not(:empty) ~ .separated-${e(key)}:not(:empty)::before`]: {
               ...(typeof value === "string"
                 ? {
-                    content: `"${value}"`,
+                    content: `"<span aria-hidden=\"true\">${value}</span>"`,
                   }
                 : value),
             },
